@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Card</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+            var pNum = 1;
+
+            $('button').click('#forms',function(){
+                $(this).submit();
+                    var firstName = $('input[name="firstname"]').val();
+                    var lastName = $('input[name="lastname"]').val();
+                    var descrip = $('textarea[name="description"]').val();
+
+                    var label = "<label class='box'>Click here for description</label>";
+
+
+                    $('#lastArea').append("<div id='rightarea'><h2>"+firstName
+                    + " "+lastName+
+                    "</h2><div><p id='"+pNum+"'class='box'>"+descrip+"</p>"+label+"</div></div>");
+
+                    $('#'+pNum+'').hide();
+                    pNum += 1;
+
+                    return false;
+                
+            })
+
+            $(document).on('click', '.box', function(){
+                event.stopPropagation();
+                $(this).hide().siblings().show();
+            });
+        })
+    </script>
+</head>
+<body>
+    <h1>Contact Card</h1>
+    <div id="leftarea">
+        <form id="forms" action="">
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="lastname"><br>
+            <p>Description:</p> <br>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <button>Save</button>
+        </form>
+    </div>
+    <div id="lastArea"></div>
+</body>
+</html>

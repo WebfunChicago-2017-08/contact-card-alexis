@@ -1,0 +1,63 @@
+#leftarea{
+    display: inline-block;
+    width: 327px;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: seashell;
+}
+
+form{
+    float: right;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+p{
+    text-align: left;
+    margin-bottom: 0px;
+}
+textarea[name='description']{
+    height: 125px;
+    width: 272px;
+    padding: 5px;
+}
+
+input{
+    margin: 10px;
+}
+
+#rightarea{
+    border: 4px dashed darksalmon;
+    display: inline-block;
+    vertical-align: top;
+    width: 278px;
+    height: 200px;
+    margin: 5px;
+    text-align: center;
+}
+
+#rightarea p {
+    padding: 9px;
+    border: 1px solid black;
+    border-style: solid hidden hidden hidden;
+    margin-top: 0px;
+}
+
+h2{
+    background-color: #B3DFF1;
+    margin: 0px;
+    height: 37px;
+    padding-top: 16px;
+}
+
+label{
+    margin: 10px;
+    font-size: 19px;
+    display: inline-block;
+    margin-top: 56px;
+}
+
+#lastArea{
+    display: initial;
+    vertical-align: top;
+}
